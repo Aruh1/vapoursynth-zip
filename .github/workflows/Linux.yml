@@ -93,3 +93,9 @@ jobs:
 
     - name: Run props.vpy
       run: vspipe ./test/props.vpy .
+
+    - name: Run Upload Artifact
+      uses: actions/upload-artifact@main
+      with:
+        name: libvszip.so
+        path: zig-out/lib/libvszip.so

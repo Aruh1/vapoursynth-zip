@@ -36,3 +36,9 @@ jobs:
 
       - name: Run rfs_mismatch.vpy
         run: .\vapoursynth-portable\VSPipe.exe .\test\rfs_mismatch.vpy .
+
+      - name: Run Upload Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: vszip.dll
+          path: .\vapoursynth-portable\vs-plugins\vszip.dll
